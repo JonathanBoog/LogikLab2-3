@@ -1,1 +1,1 @@
-# LogikLab2-3
+# Logik Lab 2-3
