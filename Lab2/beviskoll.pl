@@ -1,6 +1,6 @@
 % Proof checker on Natural Deduction
 %
-% By Jonathan Lavén & Julius Geiryd
+% Author: Jonathan Lavén & Julius Geiryd
 %
 % 2024-11-20
 
