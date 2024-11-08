@@ -84,5 +84,15 @@ verifyLine([LineNum, Term, pbc(X,Y)], _, Proof) :-
 %Check LEM
 verifyLine([LineNum, Term, lem], _, Proof) :-
 
+%Gets the first element of a list, the line number
+getFirstOfList([H|T], H).
 
-findTerm() :-
+%Gets the seconds element of a list, the term
+getSecondOfList([_,B|T], B).
+
+%Tries to find the term in the proof at a line
+findTerm(LineNum,[], Term) :- false.
+findTerm(LineNum, [Line|T], Term) :- getFirstOfList(Line, LineNum), getSecondOfList(Line, Term).
+findTerm(LineNum, [[Line|Ts]|T], Term) :- getFirstOfList(Line, LineNum), getSecondOfList(Line, Term).
+findTerm(LineNum, [[Line|Ts]|T], Term) :- findTerm(LineNum, Ts, Term).
+findTerm(LineNum, [Line|T], Term) :- findTerm(LineNum, T, Term).
