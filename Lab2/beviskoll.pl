@@ -85,5 +85,4 @@ verifyLine([LineNum, Term, pbc(X,Y)], _, Proof) :-
 verifyLine([LineNum, Term, lem], _, Proof) :-
 
 
-findTerm() :- 
-*\
+findTerm() :-
