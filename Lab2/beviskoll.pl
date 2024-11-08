@@ -37,52 +37,53 @@ verifyLine([[_,Term, assumption]|T], Prems, Proof) :- verifyProof(T,Prems, Proof
 verifyLine([LineNum, Term, copy(X)], _, Proof) :- X < LineNum, findTerm() 
 
 %Check and-introduction 
-verifyLine([LineNum, Term, andint(x,y)], _, Proof) :- 
+verifyLine([LineNum, Term, andint(X,Y)], _, Proof) :- 
 
 %Check and-elimination 1
-verifyLine([LineNum, Term, andel1(x)], _, Proof) :-  
+verifyLine([LineNum, Term, andel1(X)], _, Proof) :-  
 
 %Check and-elimination 2
-verifyLine([LineNum, Term, andel2(x)], _, Proof) :-
+verifyLine([LineNum, Term, andel2(X)], _, Proof) :-
 
 %Check or-introduction 1
-verifyLine([LineNum, Term, orint1(x)], _, Proof) :- 
+verifyLine([LineNum, Term, orint1(X)], _, Proof) :- 
 
 %Check or-introduction 2
-verifyLine([LineNum, Term, orint2(x)], _, Proof) :-
+verifyLine([LineNum, Term, orint2(X)], _, Proof) :-
 
 %Check or-elimination
-verifyLine([LineNum, Term, orel(x,y,u,v,w)], _, Proof) :-
+verifyLine([LineNum, Term, orel(X,Y,U,V,W)], _, Proof) :-
 
 %Check implication introduction
-verifyLine([LineNum, Term, impint(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, impint(X,Y)], _, Proof) :-
 
 %Check implication elimination
-verifyLine([LineNum, Term, impel(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, impel(X,Y)], _, Proof) :-
 
 %Check neg introduction
-verifyLine([LineNum, Term, negint(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, negint(X,Y)], _, Proof) :-
 
 %Check neg elimination 
-verifyLine([LineNum, Term, negel(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, negel(X,Y)], _, Proof) :-
 
 %Check contradiction elimination
-verifyLine([LineNum, Term, contel(x)], _, Proof) :-
+verifyLine([LineNum, Term, contel(X)], _, Proof) :-
 
 %Check neg neg introduction
-verifyLine([LineNum, Term, negnegint(x)], _, Proof) :- 
+verifyLine([LineNum, Term, negnegint(X)], _, Proof) :- 
 
 %Check neg neg elimination
-verifyLine([LineNum, Term, negnegel(x)], _, Proof) :-
+verifyLine([LineNum, Term, negnegel(X)], _, Proof) :-
 
 %Check MT
-verifyLine([LineNum, Term, mt(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, mt(X,Y)], _, Proof) :-
 
 %Check proof by contradiction (PBC)
-verifyLine([LineNum, Term, pbc(x,y)], _, Proof) :-
+verifyLine([LineNum, Term, pbc(X,Y)], _, Proof) :-
 
 %Check LEM
 verifyLine([LineNum, Term, lem], _, Proof) :-
 
 
 findTerm() :- 
+*\
