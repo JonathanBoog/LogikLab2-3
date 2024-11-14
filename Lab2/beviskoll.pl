@@ -43,8 +43,7 @@ verify_line(Prems, Goal, [[LineNum, Predicate, copy(X)]|T], Seen) :-
   verify_line(Prems, Goal, T, [[LineNum, Predicate, copy(X)]|Seen]).
 
 % And inttroduction.
-% Look up the lines that are referenced to
-% and see if they exist in Seen.
+% Look up the lines that are referenced to and see if they exist in Seen.
 verify_line(Prems, Goal, [[LineNum, and(A, B), andint(X, Y)]|T], Seen) :-
   find_line(X, Seen, A),
   find_line(Y, Seen, B),
