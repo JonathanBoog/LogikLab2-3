@@ -71,9 +71,9 @@ verify_line(Prems, Goal, [[LineNum, or(A, B), orint2(X)]|T], Seen) :-
 
 % Or elimination. 
 verify_line(Prems, Goal, [[LineNum, C, orel(X, Y, U, V, W)]|T], Seen) :-
+    find_line(X, Seen, or(A, B)), % X is an or statement.
     box_in_list(Seen, Box1),
     box_in_list(Seen, Box2),
-    find_line(X, Seen, or(A, B)), % X is an or statement.
     first_box_elem(Box1, [Y, A, _]),
     last_box_elem(Box1, [U, C, _]),
     first_box_elem(Box2, [V, B, _]),
