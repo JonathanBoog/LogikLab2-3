@@ -1,7 +1,7 @@
 %
 % Author: Jonathan Lavén & Julius Geiryd
 %
-% 2024-11-20
+% 2024-11-22
 
 % For SICStus, uncomment line below: (needed for member/2)
 :- use_module(library(lists)).
