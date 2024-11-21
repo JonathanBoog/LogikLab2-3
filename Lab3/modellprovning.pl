@@ -95,7 +95,7 @@ check(T, L, S, U, ef(F)) :-
     member(Next, NextStates),
     check(T, L, Next, [S|U], ef(F)).
 
-% AF1 EJ KLAR
+% AF1
 check(T, L, S, U, af(F)) :-
     \+ member(S, U),
     check(T, L, S, [], F).  
