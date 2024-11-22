@@ -6,7 +6,7 @@ run_all_tests(ProgramToTest) :-
           B,
           (write('Could not consult \"'), write(ProgramToTest),
            write('\": '), write(B), nl, halt)),
-    all_valid_ok(['valid000.txt','valid001.txt','valid002.txt','valid004.txt','valid005.txt',
+    all_valid_ok(['musikspelare.txt', 'valid000.txt','valid001.txt','valid002.txt','valid004.txt','valid005.txt',
 'valid006.txt','valid011.txt','valid012.txt','valid014.txt','valid016.txt',
 'valid018.txt','valid022.txt','valid023.txt','valid024.txt','valid031.txt',
 'valid032.txt','valid035.txt','valid036.txt','valid037.txt','valid038.txt',
