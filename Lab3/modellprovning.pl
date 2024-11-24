@@ -66,7 +66,7 @@ check(_, _, S, U, ag(_)) :-
 
 % AG2 
 check(T, L, S, U, ag(F)) :-
-    \+ member(S, U),
+    \+ member(S, U), % För att undvika oändliga cykler
     check(T, L, S, [], F),
     getInnerList(T, S, NextStates),
     checkAllStates(T, L, NextStates, [S|U], ag(F)).
