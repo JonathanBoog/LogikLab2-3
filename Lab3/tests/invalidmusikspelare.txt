@@ -1,0 +1,15 @@
+[[idle, [loading, error]],
+ [loading, [playing, error]],
+ [playing, [idle, paused, error]],
+ [paused, [idle, playing, error]],
+ [error, [idle]]].
+
+[[idle, []],
+ [loading, [track_loaded]],
+ [playing, [track_loaded, playing]],
+ [paused, [track_loaded, paused]],
+ [error, [error]]].
+
+idle.
+
+af(error).
