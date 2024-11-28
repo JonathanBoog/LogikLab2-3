@@ -10,6 +10,6 @@
  [paused, [track_loaded, paused]],
  [error, [error]]].
 
-loading.
+idle.
 
-ex(playing).
+ef(eg(track_loaded)).

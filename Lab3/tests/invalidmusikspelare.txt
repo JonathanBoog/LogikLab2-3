@@ -12,4 +12,4 @@
 
 idle.
 
-af(error).
+ef(ag(track_loaded)).
